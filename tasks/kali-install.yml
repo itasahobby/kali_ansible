@@ -1,0 +1,17 @@
+---
+# This install tools
+- name: Include vars of tools.yml
+  include_vars:
+    file: vars/tools.yml
+    name: tools
+- name: Install OS packages
+  apt:
+    name: "{{ kali_os_packages }}"
+    state: present
+  become: true
+- import_tasks: install-vscode.yml
+- name: Install tool packages
+  apt:
+    name: "{{ kali_tool_packages }}"
+    state: present
+  become: true

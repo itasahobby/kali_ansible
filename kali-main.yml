@@ -1,0 +1,13 @@
+---
+- name: "Kali "
+  hosts: localhost
+  connection: local
+  pre_tasks:
+    - name: Load variable files.
+      include_vars: "{{ item }}"
+      loop:
+        - "vars/generic.yml"
+        - "vars/tools.yml"
+  tasks:
+    - import_tasks: tasks/kali-customization.yml
+    - import_tasks: tasks/kali-install.yml
