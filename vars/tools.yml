@@ -21,3 +21,5 @@ kali_tool_packages:
   - golang
   - ipython3
   - python3-pip
+
+pip2_url: https://bootstrap.pypa.io/pip/2.7/get-pip.py
