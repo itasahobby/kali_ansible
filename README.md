@@ -10,10 +10,10 @@
 <br />
 <p align="center">
 
-  <h3 align="center">project_title</h3>
+  <h3 align="center">Kali Ansible</h3>
 
   <p align="center">
-    Kali Ansible provisioning
+    Kali automatic provisioning for pentesting and CTFs
     <br />
     <a href="https://github.com/itasahobby/kali_ansible"><strong>Explore the docs »</strong></a>
     <br />
@@ -53,20 +53,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`itasahobby`, `kali_ansible`, `jusepe_it`, `itasahobby@gmail.com`, `Kali Ansible`, `Kali Ansible provisioning`
-
+Automatic kali linux provisioning using ansible, includes the following:
+* Terminal and directory customization
+* Generic tools
+* Pentesting related tools
 
 ### Built With
 
-* []()
-* []()
-* []()
-
-
+* [Ansible](https://www.ansible.com/)
 
 <!-- GETTING STARTED -->
 ## Getting Started
