@@ -4,6 +4,7 @@
   get_url:
     url: "{{pip2_url}}"
     dest: /tmp/get-pip-py
+    mode: 0777
 - name: Install pip2
   become: yes
   command: /tmp/get-pip-py
