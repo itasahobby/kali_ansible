@@ -12,10 +12,10 @@
 - name: "Change default shell to bash"
   block:
   - name: Change default shell to regular user
-    become: true
+    become: yes
     command: "{{ 'chsh -s /bin/bash ' + kali_user }}" 
   - name: Change default shell to root
-    become: true
+    become: yes
     command: chsh -s /bin/bash
 - name: "Replace bashrc"
   block:
@@ -25,7 +25,7 @@
         dest: "{{ lookup('env','HOME') + '/.bashrc'}}"
         remote_src: yes
     - name: "Replace root bashrc"
-      become: true
+      become: yes
       copy: 
         src: "files/.bashrc"
         dest: "{{ lookup('env','HOME') + '/.bashrc'}}"

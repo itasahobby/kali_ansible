@@ -1,7 +1,7 @@
 ---
 # Install visual studio code as APT
 - name: Install Visual Studio Code dependencies (apt)
-  become: true
+  become: yes
   apt:
     name:
       - ca-certificates

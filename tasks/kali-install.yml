@@ -8,11 +8,11 @@
   apt:
     name: "{{ kali_os_packages }}"
     state: present
-  become: true
+  become: yes
 - import_tasks: install-pip2.yml
 - import_tasks: install-vscode.yml
 - name: Install tool packages
   apt:
     name: "{{ kali_tool_packages }}"
     state: present
-  become: true
+  become: yes
