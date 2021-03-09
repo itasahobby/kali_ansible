@@ -1,0 +1,23 @@
+kali_os_packages:
+  - apt-transport-https
+  - cmake
+  - gufw
+  - kali-linux-default
+  - libssl-dev
+  - ufw
+  - wireguard
+  - xclip
+  - xsel
+  - ca-certificates
+
+kali_tool_packages:
+  - bloodhound
+  - ffuf
+  - gdb
+  - libreoffice
+  - powershell
+  - proxychains4
+  - rlwrap
+  - golang
+  - ipython3
+  - python3-pip

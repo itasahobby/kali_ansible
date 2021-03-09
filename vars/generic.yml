@@ -1,0 +1,1 @@
+kali_user: "{{ lookup('env','USER') }}"
