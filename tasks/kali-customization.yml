@@ -9,14 +9,6 @@
     - HackTheBox/Machines
     - TryHackMe
     - CTFs
-- name: "Change default shell to bash"
-  block:
-  - name: Change default shell to regular user
-    become: true
-    command: "{{ 'chsh -s /bin/bash ' + kali_user }}" 
-  - name: Change default shell to root
-    become: true
-    command: chsh -s /bin/bash
 - name: "Replace bashrc"
   block:
     - name: "Replace user bashrc"
@@ -29,4 +21,17 @@
       copy: 
         src: "files/.bashrc"
         dest: "{{ lookup('env','HOME') + '/.bashrc'}}"
+        remote_src: yes
+- name: "Setup tmux"
+  block:
+    - name: Change default shell to regular user
+      become: true
+      command: "{{ 'chsh -s /usr/bin/tmux ' + kali_user }}" 
+    - name: Change default shell to root
+      become: true
+      command: chsh -s /bin/bash
+    - name: "Replace user .tmux.conf"
+      copy: 
+        src: "files/.tmux.conf"
+        dest: "{{ lookup('env','HOME') + '/.tmux.conf'}}"
         remote_src: yes
