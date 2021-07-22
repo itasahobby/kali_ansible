@@ -9,6 +9,7 @@ kali_os_packages:
   - xclip
   - xsel
   - ca-certificates
+  - tmux
 
 kali_tool_packages:
   - bloodhound
@@ -21,5 +22,14 @@ kali_tool_packages:
   - golang
   - ipython3
   - python3-pip
+  - cargo
+
+pip3_packages:
+  - git+https://github.com/SecureAuthCorp/impacket.git
+  - git+https://github.com/decalage2/oletools.git
+  - git+https://github.com/calebstewart/pwncat.git
+
+wget_tools:
+  - https://raw.githubusercontent.com/lobuhi/byp4xx/main/byp4xx.py
 
 pip2_url: https://bootstrap.pypa.io/pip/2.7/get-pip.py

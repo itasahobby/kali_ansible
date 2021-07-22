@@ -9,5 +9,5 @@
         - "vars/generic.yml"
         - "vars/tools.yml"
   tasks:
-    - import_tasks: tasks/kali-customization.yml
     - import_tasks: tasks/kali-install.yml
+    - import_tasks: tasks/kali-customization.yml
