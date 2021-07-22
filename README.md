@@ -103,7 +103,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@jusepe_it](https://twitter.com/jusepe_it) - email
+[@jusepe_it](https://twitter.com/jusepe_it)
 
 Project Link: [https://github.com/itasahobby/kali_ansible](https://github.com/itasahobby/kali_ansible)
 
