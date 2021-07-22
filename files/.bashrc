@@ -56,11 +56,21 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+get_exit_status(){
+    es=$?
+    if [ $es -eq 0 ]
+    then
+        echo -e "${GREEN}${es}${NONE}"
+    else
+        echo -e "${RED}${es}${NONE}"
+    fi
+}
+
 
 if [ "$color_prompt" = yes ]; then
-    PS1='\[\e[32m\][\[\e[m\]\[\e[31m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\w\[\e[m\]\[\e[32m\]]\[\e[m\]\[\e[32m\][\[\e[31m\]$?\[\e[32m\]]\[\e[32;47m\]\\$\[\e[m\] '
+    PS1='\[\e[32m\][\[\e[m\]\[\e[31m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\w\[\e[m\]\[\e[32m\]]\[\e[m\]'
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\ '
 fi
 unset color_prompt force_color_prompt
 
@@ -116,11 +126,11 @@ fi
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
 fi
 
 # Go PATH
