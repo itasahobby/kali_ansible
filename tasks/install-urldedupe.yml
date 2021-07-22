@@ -1,0 +1,23 @@
+---
+# Install urldedupe
+- name: Download repository
+  git:
+    repo: https://github.com/ameenmaali/urldedupe.git 
+    dest: /tmp/urldedupe
+    clone: yes
+    update: yes
+- name: Prepares to build the tool
+  ansible.builtin.shell: cmake CMakeLists.txt
+  args:
+    chdir: /tmp/urldedupe
+- name: Builds the tool
+  ansible.builtin.shell: make
+  args:
+    chdir: /tmp/urldedupe
+- name: Copies the binary
+  become: yes
+  copy: 
+    src: "/tmp/urldedupe/urldedupe"
+    dest: "/usr/bin/urldedupe"
+    mode: a+x
+    remote_src: yes

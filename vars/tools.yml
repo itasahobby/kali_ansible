@@ -12,6 +12,7 @@ kali_os_packages:
   - tmux
 
 kali_tool_packages:
+  - npm
   - bloodhound
   - ffuf
   - gdb
@@ -24,12 +25,26 @@ kali_tool_packages:
   - python3-pip
   - cargo
 
+cargo_packages:
+  - ppfuzz
+
+go_packages:
+  - github.com/KathanP19/protoscan
+  - github.com/hahwul/dalfox/v2
+  - github.com/projectdiscovery/nuclei/v2/cmd/nuclei
+  - github.com/projectdiscovery/subfinder/v2/cmd/subfinder
+  - github.com/projectdiscovery/httpx/cmd/httpx
+  - github.com/projectdiscovery/dnsx/cmd/dnsx
+  - github.com/tomnomnom/assetfinder
+  - github.com/tomnomnom/waybackurls
+  - github.com/tomnomnom/qsreplace
+
 pip3_packages:
   - git+https://github.com/SecureAuthCorp/impacket.git
   - git+https://github.com/decalage2/oletools.git
   - git+https://github.com/calebstewart/pwncat.git
 
-wget_tools:
+github_tools:
   - https://raw.githubusercontent.com/lobuhi/byp4xx/main/byp4xx.py
 
 pip2_url: https://bootstrap.pypa.io/pip/2.7/get-pip.py
