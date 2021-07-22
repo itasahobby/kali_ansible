@@ -135,21 +135,3 @@ fi
 
 # Go PATH
 export PATH=$PATH:$(go env GOPATH)/bin
-
-# SET PROMPT_COMMAND 
-PROMPT_COMMAND=__prompt_command 
-
-__prompt_command() {
-    # Gets exit status code
-    local EXIT="$?"
-    # Colors
-    local RCol='\[\e[0m\]'
-    local Red='\[\e[0;31m\]'
-    # PROMPT
-    PS1='\[\e[32m\][\[\e[m\]\[\e[31m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\w\[\e[m\]\[\e[32m\]]\[\e[m\]'
-    # Shows if exit code non 0
-    if [ $EXIT != 0 ]; then
-        PS1+="${Red}[${EXIT}]${RCol}" 
-    fi
-    PS1+="$ "
-}
