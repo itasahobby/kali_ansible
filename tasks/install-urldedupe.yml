@@ -7,11 +7,11 @@
     clone: yes
     update: yes
 - name: Prepares to build the tool
-  ansible.builtin.shell: cmake CMakeLists.txt
+  shell: cmake CMakeLists.txt
   args:
     chdir: /tmp/urldedupe
 - name: Builds the tool
-  ansible.builtin.shell: make
+  shell: make
   args:
     chdir: /tmp/urldedupe
 - name: Copies the binary

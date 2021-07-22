@@ -135,3 +135,6 @@ fi
 
 # Go PATH
 export PATH=$PATH:$(go env GOPATH)/bin
+
+# Burp
+alias burp='(cd /home/jusepe/.burp;java -javaagent:BurpSuiteLoader_v2020.12.1.jar -noverify -jar burpsuite_pro_v2020.12.1.jar &) &>/dev/null'

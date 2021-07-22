@@ -16,12 +16,12 @@
     name: "{{ kali_tool_packages }}"
     state: present
   become: yes
-- name: Install pip3 packages
-  apt:
-    name: "{{ pip3_packages }}"
-    state: present
-- name: Install go packages
-  apt:
-    name: "{{ github_tools }}"
-    state: present
+#- name: Install pip3 packages
+#  apt:
+#    name: "{{ pip3_packages }}"
+#    state: present
+#- name: Install go packages
+#  apt:
+#    name: "{{ github_tools }}"
+#    state: present
 - import_tasks: install-urldedupe.yml
